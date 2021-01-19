@@ -1,0 +1,66 @@
+\ProvidesFile{jaytex}
+\newcommand{\p}[1]{\mathbb{P}(#1)}
+\newcommand{\ex}[1]{\mathbb{E}[#1]}
+\newcommand{\Cov}[1]{\mathrm{Cov}(#1)}
+\newcommand{\Var}[1]{\mathrm{Var}[#1]}
+\renewcommand{\Cov}[2]{\mathrm{Cov}[#1, #2]}
+\newcommand{\Geo}[1]{\mathrm{Geo}(#1)}
+\newcommand{\Bern}[1]{\mathrm{Bernoulli}(#1)}
+\newcommand{\Binom}[2]{\mathrm{Binom}(#1, #2)}
+\newcommand{\Exp}[1]{\mathrm{Exp}(#1)}
+\newcommand{\Pois}[1]{\mathrm{Pois}(#1)}
+\newcommand{\N}[2]{\mathcal{N}(#1, #2)}
+\newcommand{\LLSE}[2]{\mathrm{LLSE}[#1 | #2]}
+\newcommand{\MMSE}[2]{\mathrm{MMSE}[#1 | #2]}
+\newcommand{\MAP}[2]{\mathrm{MAP}[#1 | #2]}
+\newcommand{\MLE}[2]{\mathrm{MLE}[#1 | #2]}
+\newcommand{\D}{\mathrm{d}}
+\newcommand{\s}[4]{\sum_{#1 = #2}^{#3} #4}
+\newcommand{\m}[4]{\prod_{#1 = #2}^{#3} #4}
+\newcommand{\I}[4]{ \int_{#2}^{#3} #4 \, \D #1}
+\newcommand{\eval}[3]{\left. #1 \right\rvert_{#2}^{#3}}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage{mathtools}
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+\DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+\RequirePackage[]{textcomp}
+\RequirePackage[]{amsmath}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator{\sign}{sign}
+\RequirePackage[]{amssymb}
+\RequirePackage[]{amsthm}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\RequirePackage[]{esdiff}
+\RequirePackage[]{enumerate}
+\RequirePackage[]{empheq}
+\RequirePackage{graphicx}
+\RequirePackage{url}
+\RequirePackage{tikz}
+\RequirePackage[margin=1.5in]{geometry}
+\RequirePackage{tikz}
+\usetikzlibrary{automata, shapes, positioning, arrows}
+\RequirePackage{graphicx}
+\tikzset{->,  % makes the edges directed
+>=stealth, % makes the arrow heads bold
+node distance=2cm, % specifies the minimum distance between two nodes. Change if necessary.
+shorten >=1pt,
+line width=0.5pt,
+semithick,
+every state/.style={thick, fill=gray!10, minimum size=1cm}, % sets the properties for each ’state’ node
+initial text=$ $, % sets the text that appears on the start arrow
+on grid,
+auto
+}
+\RequirePackage{float}
+\RequirePackage{hyperref}
+\hypersetup{
+    colorlinks,
+    linktoc=all,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+\RequirePackage{epigraph}
