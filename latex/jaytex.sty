@@ -19,19 +19,28 @@
 \newcommand{\m}[4]{\prod_{#1 = #2}^{#3} #4}
 \newcommand{\I}[4]{ \int_{#2}^{#3} #4 \, \D #1}
 \newcommand{\eval}[3]{\left. #1 \right\rvert_{#2}^{#3}}
+\newcommand{\hr}{\rule{\linewidth}{0.5mm}}
+\newcommand{\correct}[1]{\textcolor{Green}{\textbf{#1}}}
+\newcommand{\incorrect}[1]{\textcolor{Red}{\textbf{#1}}}
 \RequirePackage[utf8]{inputenc}
+\RequirePackage[dvipsnames]{xcolor}
 \RequirePackage{mathtools}
 \DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
 \DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
 \DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
 \RequirePackage[]{textcomp}
 \RequirePackage[]{amsmath}
+\RequirePackage[scr]{rsfso}
 \DeclareMathOperator*{\argmin}{arg\,min}
 \DeclareMathOperator{\sign}{sign}
 \RequirePackage[]{amssymb}
 \RequirePackage[]{amsthm}
 \theoremstyle{definition}
 \newtheorem{definition}{Definition}[section]
+\theoremstyle{definition}
+\newtheorem{example}{Example}[section]
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
 \RequirePackage[]{esdiff}
 \RequirePackage[]{enumerate}
 \RequirePackage[]{empheq}
