@@ -9,12 +9,17 @@
 \newcommand{\Binom}[2]{\mathrm{Binom}(#1, #2)}
 \newcommand{\Exp}[1]{\mathrm{Exp}(#1)}
 \newcommand{\Pois}[1]{\mathrm{Pois}(#1)}
-\newcommand{\N}[2]{\mathcal{N}(#1, #2)}
+\newcommand{\Norm}[2]{\mathcal{N}(#1, #2)}
 \newcommand{\LLSE}[2]{\mathrm{LLSE}[#1 | #2]}
 \newcommand{\MMSE}[2]{\mathrm{MMSE}[#1 | #2]}
 \newcommand{\MAP}[2]{\mathrm{MAP}[#1 | #2]}
 \newcommand{\MLE}[2]{\mathrm{MLE}[#1 | #2]}
 \newcommand{\D}{\mathrm{d}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
 \newcommand{\s}[4]{\sum_{#1 = #2}^{#3} #4}
 \newcommand{\m}[4]{\prod_{#1 = #2}^{#3} #4}
 \newcommand{\I}[4]{ \int_{#2}^{#3} #4 \, \D #1}
@@ -22,17 +27,24 @@
 \newcommand{\hr}{\rule{\linewidth}{0.5mm}}
 \newcommand{\correct}[1]{\textcolor{Green}{\textbf{#1}}}
 \newcommand{\incorrect}[1]{\textcolor{Red}{\textbf{#1}}}
+\newcommand{\ts}[1]{\textsuperscript{#1}}
 \RequirePackage[utf8]{inputenc}
+\RequirePackage[legalpaper, portrait, total={7in, 11in}]{geometry}
 \RequirePackage[dvipsnames]{xcolor}
 \RequirePackage{mathtools}
 \DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
 \DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
 \DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+\DeclarePairedDelimiter{\absq}{\lvert}{\rvert^2}
+\DeclarePairedDelimiter{\vecmag}{\lvert \lvert}{\rvert \rvert}
+\DeclarePairedDelimiter{\vecmagsq}{\lvert \lvert}{\rvert \rvert^2}
+\DeclarePairedDelimiter{\inner}{\langle}{\rangle}
 \RequirePackage[]{textcomp}
 \RequirePackage[]{amsmath}
 \RequirePackage[scr]{rsfso}
 \DeclareMathOperator*{\argmin}{arg\,min}
 \DeclareMathOperator{\sign}{sign}
+\DeclareMathOperator{\lcm}{lcm}
 \RequirePackage[]{amssymb}
 \RequirePackage[]{amsthm}
 \theoremstyle{definition}
@@ -41,27 +53,36 @@
 \newtheorem{example}{Example}[section]
 \theoremstyle{plain}
 \newtheorem{theorem}{Theorem}[section]
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+\theoremstyle{plain}
+\newtheorem{remark}{Remark}[section]
 \RequirePackage[]{esdiff}
 \RequirePackage[]{enumerate}
 \RequirePackage[]{empheq}
 \RequirePackage{graphicx}
 \RequirePackage{url}
 \RequirePackage{tikz}
-\RequirePackage[margin=1.5in]{geometry}
-\RequirePackage{tikz}
 \usetikzlibrary{automata, shapes, positioning, arrows}
+\RequirePackage{circuitikz}
 \RequirePackage{graphicx}
-\tikzset{->,  % makes the edges directed
->=stealth, % makes the arrow heads bold
-node distance=2cm, % specifies the minimum distance between two nodes. Change if necessary.
-shorten >=1pt,
-line width=0.5pt,
-semithick,
-every state/.style={thick, fill=gray!10, minimum size=1cm}, % sets the properties for each ’state’ node
-initial text=$ $, % sets the text that appears on the start arrow
-on grid,
-auto
-}
+\RequirePackage{tabu}
+\DeclareMathOperator{\divides}{\mid}
+\DeclareMathOperator{\ndivides}{\nmid}
+\newcommand{\setgen}[2]{\{#1 \divides #2\}}
+\newcommand{\nonegz}{\{0\} \cup \mathbb{Z}^+}
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+% \tikzset{->,  % makes the edges directed
+% >=stealth, % makes the arrow heads bold
+% node distance=2cm, % specifies the minimum distance between two nodes. Change if necessary.
+% shorten >=1pt,
+% line width=0.5pt,
+% semithick,
+% every state/.style={thick, fill=gray!10, minimum size=1cm}, % sets the properties for each ’state’ node
+% initial text=$ $, % sets the text that appears on the start arrow
+% on grid,
+% auto
+% }
 \RequirePackage{float}
 \RequirePackage{hyperref}
 \hypersetup{
@@ -69,7 +90,7 @@ auto
     linktoc=all,
     citecolor=black,
     filecolor=black,
-    linkcolor=black,
-    urlcolor=black
+    linkcolor=blue,
+    urlcolor=blue,
 }
 \RequirePackage{epigraph}
