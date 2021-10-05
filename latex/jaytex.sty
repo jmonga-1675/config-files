@@ -20,6 +20,7 @@
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
 \newcommand{\s}[4]{\sum_{#1 = #2}^{#3} #4}
 \newcommand{\m}[4]{\prod_{#1 = #2}^{#3} #4}
 \newcommand{\I}[4]{ \int_{#2}^{#3} #4 \, \D #1}
@@ -93,4 +94,33 @@
     linkcolor=blue,
     urlcolor=blue,
 }
+
+\RequirePackage{listings}
+
+% \definecolor{mylightgrey}{rgb}{0.9, 0.9, 0.9}
+\definecolor{mylightgrey}{rgb}{1.0, 1.0, 1.0}
+\definecolor{mydarkyellow}{rgb}{0.7, 0.6, 0}
+\definecolor{mymidgreen}{rgb}{0.4, 0.7, 0.4}
+
+% MATLAB
+\lstset{
+  language=Matlab,
+  backgroundcolor = \color{mylightgrey},
+  keywordstyle = \color{blue},
+  stringstyle = \color{mydarkyellow},
+  rulecolor = \color{black},
+  commentstyle = \color{mymidgreen}
+}
+
+% Python
+\lstset{
+  language=Python,
+  basicstyle=\footnotesize,
+  backgroundcolor = \color{mylightgrey},
+  keywordstyle = \color{blue},
+  stringstyle = \color{mydarkyellow},
+  rulecolor = \color{black},
+  commentstyle = \color{mymidgreen}
+}
+
 \RequirePackage{epigraph}
